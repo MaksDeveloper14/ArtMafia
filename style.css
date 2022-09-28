@@ -23,6 +23,7 @@ a {
 /* ============== Базовые стили ================== */
 
 .header {
+
 }
 .header__top {
 	background-color: black;
@@ -129,7 +130,7 @@ a {
 	width: 100%;
 	min-height: 700px;
 	display: flex;
-	background-color: red;
+	flex-wrap: wrap;
 }
 
 .section2-left {
@@ -213,6 +214,7 @@ a {
 }
 .footer_navigation-site {
 	display: flex;
+	flex-wrap: wrap;
 }
 .footer_navigation-site-item {
 	margin-right: 30px;
@@ -220,4 +222,50 @@ a {
 .footer_navigation-site a {
 	color: white;
 	text-transform: uppercase;
+}
+
+
+
+
+@media screen and (max-width: 1070px) {
+	.header-content {
+		display: none;
+	}
+	.section2 {
+		flex-wrap: wrap;
+	}
+	.section2-left {
+		width: 100%;
+		order: 2;
+	}
+	.section2-right {
+		width: 100%;
+		order: 1;
+		padding: 0;
+	}
+	.section2-right__image {
+		width: 90%;
+		/*margin-bottom: -50px;*/
+	}
+	.section2-left img {
+		width: 100%;
+	}
+	.section2-right__content {
+		width: 80%;
+		margin: 0 auto;
+		height: 100vh;
+	}
+}
+
+
+@media screen and (max-width: 800px) { 
+	.section1__image {
+		display: none;
+	}
+	.section1__title {
+		padding-top: 75px;
+	}
+	.footer_navigation-site-item {
+		margin-right: 10px;
+	}
 }
